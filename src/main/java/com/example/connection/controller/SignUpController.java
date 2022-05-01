@@ -14,7 +14,6 @@ import java.util.List;
 public class SignUpController {
     @Autowired
     SignUpService sus;
-    //asdasd
 
     @PostMapping(path = "/save")
     public ResponseEntity<?> saveCliente(@RequestBody SignUp su){
