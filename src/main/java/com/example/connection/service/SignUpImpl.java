@@ -17,6 +17,7 @@ public class SignUpImpl implements SignUpService{
     @Override
     public boolean saveCliente(SignUp cl) {
         try{
+            System.out.println("Ali");
             SignUp sn= sur.save(cl);
             if(sn!=null){
                 return true;
@@ -24,6 +25,7 @@ public class SignUpImpl implements SignUpService{
                 return false;
             }
         }catch (Exception e){
+            System.out.println("Aqui");
             return false;
         }
     }

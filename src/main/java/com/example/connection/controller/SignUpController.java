@@ -2,6 +2,7 @@ package com.example.connection.controller;
 
 import com.example.connection.model.SignUp;
 import com.example.connection.service.SignUpService;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

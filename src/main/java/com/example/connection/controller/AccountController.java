@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/account")
 public class AccountController {
     @Autowired
-    AccountService ac;
+    AccountService sus;
     //My main app
     @PostMapping(path = "/saveaccount")
     public ResponseEntity<?> saveAccount(@RequestBody Account cac){
-        if(ac.saveCliente(cac)){
+        if(sus.saveCliente(cac)){
             return new ResponseEntity<>("Cliente salvado com sucesso", HttpStatus.OK);
         }else {
-            return new ResponseEntity<>("Nao salvado", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(cac.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
