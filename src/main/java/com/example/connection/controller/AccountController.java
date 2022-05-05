@@ -25,4 +25,9 @@ public class AccountController {
             return new ResponseEntity<>(cac.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+//    @PostMapping(path = "/verifyaccount")
+//    public ResponseEntity<?> verifyAccount(@RequestBody Account cac){
+//        if(sus.verifyClie)
+//    }
 }

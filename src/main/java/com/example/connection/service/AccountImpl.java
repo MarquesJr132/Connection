@@ -27,12 +27,14 @@ public class AccountImpl implements AccountService {
             if (allAccount.isEmpty()) {
                 Account ac = ar.save(cl);
                 EmailController ec = new EmailController();
-                ec.sendMail(cl.getEmail(),"link-por-se-gerar-com-codigo",cl.getPrimeiroNome(),cl.getUltimoNome());
+                ec.sendMail(cl.getEmail(),"link",cl.getPrimeiroNome(),cl.getUltimoNome());
                 return true;
             } else {
                 for (Account adap : allAccount) {
                     if (!adap.getEmail().equals(cl.getEmail())) {
                         Account ac = ar.save(cl);
+                        EmailController ec = new EmailController();
+                        ec.sendMail(cl.getEmail(),"link",cl.getPrimeiroNome(),cl.getUltimoNome());
                         return true;
                     }
                 }

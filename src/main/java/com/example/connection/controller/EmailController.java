@@ -34,7 +34,7 @@ public class EmailController {
                     "Bem vindo "+nome+" "+apelido+"\n" +
                     "Espero que se divirta.");
             System.out.println("Aqui?");
-            Transport.send(msg, "marquesjr898@gmail.com", "mfgmsxhojinwrska");
+            Transport.send(msg, "marquesjr898@gmail.com", "hqcwyopcdmiduarf");
         } catch (MessagingException mex) {
             System.out.println("send failed, exception: " + mex);
         }
