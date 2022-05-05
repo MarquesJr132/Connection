@@ -35,6 +35,7 @@ public class Account {
 
     @Email(message = "email invalido")
     @NotEmpty
+    @Column(unique = true)
     private String email;
 
 }

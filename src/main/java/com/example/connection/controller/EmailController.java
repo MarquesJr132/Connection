@@ -1,5 +1,7 @@
 package com.example.connection.controller;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Date;
 import java.util.Properties;
 import java.util.logging.Level;
@@ -13,6 +15,8 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+@Service
 public class EmailController {
     public void sendMail(String recipiente,String link,String nome,String apelido){
         Properties props = new Properties();
